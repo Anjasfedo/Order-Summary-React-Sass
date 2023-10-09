@@ -24,8 +24,6 @@ export default function App() {
   const isMobile = windowWidth <= 600;
 
   return (
-    <div>
-       {isMobile ? <Mobile/> : <Desktop/>}
-    </div>
+       isMobile ? <Mobile/> : <Desktop/>
   );
 }

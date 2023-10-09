@@ -1,0 +1,97 @@
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+$red-hat: 'Red Hat Display';
+
+.desktop {
+    background-color: white;
+    text-align: center;
+    width: 450px;
+    height: 700px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    .desktop_image {
+        width: 450px;
+        height: 220px;
+
+        border-radius: 1.5rem 1.5rem 0 0;
+        img {
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+    }
+    .desktop_content {
+        height: 700px-220px;
+        width: 450px;
+        border-radius: 0 0 1.5rem 1.5rem;
+        .desktop_text {
+            width: 450px-90px;
+            height: 700px-220px-90px;
+            margin: 50px 45px;
+            h2 {
+                margin: 0 115px-45px 25px;
+                color: $Dark-blue;
+                font-weight: 900;
+            }
+            p {
+                margin: 0 115px-80px 40px;
+                color: $Desaturated-blue;
+                font-weight: 500;
+            }
+            .desktop_plan {
+                height: 70px;
+                margin: 0 0 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                background-color: $Very-pale-blue;
+                border-radius: 1.5rem;
+                .plan_text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    position: relative;
+                    p {
+                        margin: 0;
+                        position: relative;
+                        right: 35px;
+                        color: $Dark-blue;
+                        font-weight: 900;
+                        &:last-child{
+                            color: $Desaturated-blue;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .desktop_button {
+                display: flex;
+                flex-direction: column;
+                justify-self: flex-end;
+                button {
+                    border-radius: 1rem;
+                    height: 50px;
+                    border: none;
+                    background-color: $Bright-blue;
+                    color: $Very-pale-blue;
+                    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+                    z-index: 2;
+                    &:last-child{
+                        color: $Dark-blue;
+                        font-weight: 400;
+                        border: none;
+                        background-color: white;
+                        box-shadow: none;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
