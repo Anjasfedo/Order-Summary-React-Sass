@@ -1,17 +1,15 @@
 import './App.scss';
 import Desktop from './Desktop';
 import Mobile from './Mobile';
-
 import React, { useState, useEffect } from 'react';
 
 export default function App() {
-  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Inisialisasi dengan nilai awal
 
   useEffect(() => {
-
     const handleSize = () => {
-      setwindowWidth(window.innerWidth);
-    }
+      setWindowWidth(window.innerWidth);
+    };
 
     window.addEventListener('resize', handleSize);
 
@@ -20,10 +18,11 @@ export default function App() {
     };
   }, []);
 
-
   const isMobile = windowWidth <= 600;
 
   return (
-       isMobile ? <Mobile/> : <Desktop/>
+    <div className='content_app'>
+      {isMobile ? <Mobile /> : <Desktop />}
+    </div>
   );
 }

@@ -1,0 +1,95 @@
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+$red-hat: 'Red Hat Display';
+
+.mobile {
+    background-color: white;
+    text-align: center;
+    width: 325px;
+    height: 570px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    .mobile_image{
+        width: 100%;
+        height: 570px - 405px;
+        border-radius: 1.5rem 1.5rem 0 0;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+    }
+    .mobile_content{
+        margin: 20px;
+        width: 325px - 40px;
+        height: 405px;
+        .mobile_text {
+            h2 {
+                margin: 15px 50px 0;
+            }
+            p {
+                margin: 30px 15px 0;
+                color: $Desaturated-blue;
+                font-weight: 500;
+            }
+            .mobile_plan{
+                display: flex;
+                align-items: center;
+                margin: 0 20px 30px;
+                height: 75px;
+                justify-content: space-between;
+                .plan_text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    position: relative;
+                    p {
+                        margin: 0;
+                        position: relative;
+                        right: 20px;
+                        color: $Dark-blue;
+                        font-size: 12px;
+                        font-weight: 900;
+                        &:last-child{
+                            color: $Desaturated-blue;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                a {
+                    font-size: 12px;
+                }
+            }
+            .mobile_button {
+                display: flex;
+                flex-direction: column;
+                justify-self: flex-end;
+                button {
+                    border-radius: 1rem;
+                    height: 45px;
+                    border: none;
+                    background-color: $Bright-blue;
+                    color: $Very-pale-blue;
+                    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+                    z-index: 2;
+                    &:last-child{
+                        color: $Dark-blue;
+                        font-weight: 700;
+                        border: none;
+                        background-color: white;
+                        box-shadow: none;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
